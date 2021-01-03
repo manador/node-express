@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Express-CURD</title>
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <link href="/public/css/dashboard.css" rel="stylesheet">
+  {{block 'head'}}{{/block}}
+</head>
+<body>
+  {{ include './header.html'}}
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+        {{ include './nav.html'}}
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <!-- 预留块 -->
+        {{ block 'content' }}
+        {{ /block }}
+      </div>
+    </div>
+  </div>
+
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  {{block 'script'}}{{/block}}
+</body>
+</html>
